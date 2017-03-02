@@ -1,68 +1,51 @@
+//Drawing Machine
+
 var angle = 0.0;
 
-
-
-
 function setup() {
-    createCanvas(1200, 700);
+    createCanvas(900, 700);
     background(0);
 }
-
-
-
-
 
 
 function draw() {
 
 //The orange circles
     if (mouseIsPressed == false) {
-
         fill(255,153,0);
         rotate(angle);
         angle += 100;
-        ellipse(mouseX / 2, mouseY / 2, height / 20, height / 20);
+        ellipse(mouseX +25, mouseY +25, height / 20, height / 20);
 
-
-    } else {
-        background(0);
-
-    }
-
-
-//The blue circles
-    if (mouseIsPressed == false) {
-
+//the blue
         fill(0, 0, 255);
         rotate(angle);
         angle += 100;
         ellipse(mouseX, 5, 40, 40);
-
-
-    } else {
-        background(0);
-    }
-
-
-
-//The light blue circles
-    if (mouseIsPressed == false) {
-
+//The light blue
         fill(0, 255, 255);
         rotate(angle);
         angle += 0.01;
-        ellipse(mouseX, mouseY, 10, 10);
+        ellipse(mouseX, mouseY, 20, 20);
 
-
-
+// The else
     } else {
-        background(0);
+
+      //orange
+      fill(255,153,0,40);
+      rotate(angle);
+      angle -= 0.30;
+      rect(mouseX +25, mouseY +25, 70, 70);
+
+      //the blue
+      fill(0, 0, 255,20);
+      rotate(angle);
+      angle -= 100;
+      ellipse(mouseX, 5, 40, 40);
+      //The light blue
+      fill(0, 255, 255,85);
+      rotate(angle);
+      angle -= 0.01;
+      ellipse(mouseX, mouseY, 20, 20);
     }
-
-
-
-
-
-
-
 }
